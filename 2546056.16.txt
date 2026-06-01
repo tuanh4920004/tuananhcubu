@@ -1,0 +1,426 @@
+2546056.16
+
+
+
+
+
+
+
+
+
+#===============================================
+Vẽ các khối hình vuông có kích thước và màu khác nhau dựa theo máy random
+
+
+import turtle as t
+import random as r
+
+def Color() : 
+    col = ["red","blue","green","purple","orange","pink"]
+    result = r.choice(col)
+    return result
+    
+    
+def Rect() :
+    c = Color()
+    t.color(c)
+
+    x = r.randint(-300,300)
+    y = r.randint(-300,300)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(4): 
+        t.forward(l)
+        t.left(90)
+    
+    t.end_fill()
+
+#--------------------------------------------------------------------------------
+    
+
+t.home()
+t.clear()
+
+t.width(3)
+
+for i in range(5) : Rect()
+
+
+
+
+#================================================
+Vẽ cách hình học khác nhau dựa vào 'n' ( n là số cạnh )
+
+
+
+import turtle as t
+import random as r
+
+def Color() : 
+    col = ["red","blue","green","purple","orange","pink"]
+    return r.choice(col)
+
+def PST() : 
+    x = r.randint(-300,300)
+    y = r.randint(-300,300)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    
+def Rect() :
+    t.color(Color())
+
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(4): 
+        t.forward(l)
+        t.left(90)
+    
+    t.end_fill()
+
+    
+def Cir() : 
+    t.color(Color())
+    
+    PST()
+    
+    t.begin_fill()
+    t.circle(r.randint(50,150))
+    t.end_fill()
+    
+def Poly(n) : 
+    t.color(Color())
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(n):
+        t.forward(l)
+        t.left(360 / n)
+    t.end_fill()
+    
+#--------------------------------------------------------------------------------
+    
+
+t.home()
+t.clear()
+
+t.width(3)
+
+for i in range(5) : 
+    #Cir()
+    #Rect()
+    n = r.randint(3,15)
+    Poly(n)
+
+
+
+#===============================================
+Vẽ hình theo lựa chọn của ng dùng.
+
+
+import turtle as t
+import random as r
+
+def Color() : 
+    col = ["red","blue","green","purple","orange","pink"]
+    return r.choice(col)
+
+def PST() : 
+    x = r.randint(-300,300)
+    y = r.randint(-300,300)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    
+def Rect() :
+    t.color(Color())
+
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(4): 
+        t.forward(l)
+        t.left(90)
+    
+    t.end_fill()
+
+    
+def Cir() : 
+    t.color(Color())
+    
+    PST()
+    
+    t.begin_fill()
+    t.circle(r.randint(50,150))
+    t.end_fill()
+    
+def Poly(n) : 
+    t.color(Color())
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(n):
+        t.forward(l)
+        t.left(360 / n)
+    t.end_fill()
+    
+#--------------------------------------------------------------------------------
+    
+
+t.home()
+t.clear()
+
+t.width(3)
+
+while True : 
+    mn = int(input("1) 사각형 - 2) 원 - 3)다각형 - 4)종료 >> "))
+    if mn == 4 : break
+        
+    if mn == 1 : Rect() 
+    elif mn == 2 : Cir()
+    elif mn == 3 :
+        n = r.randint(3,8)
+        Poly(n)
+       
+    
+print("종료합니다.")
+
+
+
+
+
+#================================================
+Vẽ biểu đồ hình cột 
+
+
+import turtle
+
+ 
+
+def drawBar(height):
+
+    t.begin_fill()              
+
+    t.left(90)
+
+    t.forward(height)
+
+    t.write(str(height), font = ('Times New Roman', 16, 'bold'))
+
+    t.right(90)
+
+ 
+
+    t.forward(40)
+
+    t.right(90)
+
+    t.forward(height)
+
+    t.left(90)
+
+    t.end_fill()    
+
+    
+
+data = [120, 56, 309, 220, 156, 23, 98]  
+
+ 
+
+t = turtle.Turtle()           
+
+t.color("blue")
+
+t.fillcolor("red")
+
+ 
+
+t.pensize(3)
+
+ 
+
+for d in data:
+
+    drawBar(d)
+
+ 
+turtle.mainloop()
+
+turtle.bye()
+
+
+
+
+
+#================================================
+
+
+
+
+import turtle as t
+import random as r
+
+def Color() : 
+    col = ["red","blue","green","purple","orange","pink"]
+    return r.choice(col)
+
+def PST() : 
+    x = r.randint(-300,300)
+    y = r.randint(-300,300)
+    t.penup()
+    t.goto(x,y)
+    t.pendown()
+    
+def Rect() :
+    t.color(Color())
+
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(4): 
+        t.forward(l)
+        t.left(90)
+    
+    t.end_fill()
+
+    
+def Cir() : 
+    t.color(Color())
+    
+    PST()
+    
+    t.begin_fill()
+    t.circle(r.randint(50,150))
+    t.end_fill()
+    
+def Poly(n) : 
+    t.color(Color())
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(n):
+        t.forward(l)
+        t.left(360 / n)
+    t.end_fill()
+    
+def Star() : 
+    t.color(Color())
+    PST()
+    
+    l = r.randint(50,150)
+    t.begin_fill()
+    
+    for i in range(n):
+        t.forward(l)
+        t.left(144)
+    t.end_fill()
+    
+#--------------------------------------------------------------------------------
+    
+
+#t.home()
+t.clear()
+
+t.width(3)
+
+while True : 
+    mn = int(input("1) 사각형 - 2) 원 - 3)다각형 -  4)별 - 5)종료 >> "))
+    if mn == 5 : break
+        
+    if mn == 1 : Rect() 
+    elif mn == 2 : Cir()
+    elif mn == 3 :
+        n = r.randint(3,8)
+        Poly(n)
+    elif mn == 4 : Star()
+       
+    
+print("종료합니다.")
+
+
+
+
+#===============================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+#================================================
+
+
+
+
+#===============================================
+
+
+
+
+
+#==============================================
+
+
+
+
+
+
+
+#==============================================
+
+
+
+
+
+
+
+
+
+#=============================================
+
