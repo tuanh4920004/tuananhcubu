@@ -1,0 +1,37 @@
+2546056.5 
+
+import random as r : import random và đặt tên ngắn là r
+x%2 là lấy dư 
+Vd : x =5 : 2 dư 1 thì sẽ là x%2==1
+
+
+#-------------------------------------------------------------------------------
+tạo ra 2 số ngẫu nhiên cộng vào với nhau và mình điền kết quả.Nếu đúng sẽ in ra True ngược lại  nếu sai sẽ in ra False
+
+import random 
+
+x = random.randint(1,100)
+y = random.randint(1,100)
+
+an = int(input(f"{x} + {y} = "))
+
+flag = (an == (x+y))
+print(flag)
+
+#----------------------------------------------------------------------------------------------------
+Tạo 2 số ngẫu nhiên r tìm số lớn nhất và nhỏ nhất
+
+
+
+import random as r
+
+x = r.randint(1,10)
+y = r.randint(1,10)
+
+max = x if x>y else y 
+min = x if x<y else y 
+print("max=",max,"min=",min)
+
+if x>y : max = x ; min = y
+else:    max = y ; min = x
+print("max=",max,"min=",min)

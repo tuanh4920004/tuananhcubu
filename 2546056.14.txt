@@ -1,0 +1,256 @@
+2546056.14
+
+*import math : để dùng các hàm toán học 
+
+* sep =" " : khi print nhiều đối số thì bình thường sẽ có dấu cách ở giữa.
+sep="" để nối liền luôn
+
+
+* ...... . append(...) : Dùng để thêm phần tử vào cuối list
+#----------------------------------------------------------------------------------------
+Code này in ra bảng giá trị sin và cos của các góc từ 0° đến 90° cách nhau 10°
+
+import math 
+
+print("각도\tsin값\tcos값  \n","_"*25,sep="")
+
+for i in range(0,91,10): 
+    if i == 0 :print(i,"\t",math.sin(3.14*i/180),"\t\t\t",math.cos(3.14*i/180))
+    else      :print(i,"\t",math.sin(3.14*i/180),"\t",math.cos(3.14*i/180))
+
+
+#----------------------------------------------------------------------------------------
+싸인함수,코싸인함수 그려보기 : Hãy vẽ đồ thị hàm sin và cos
+
+import turtle as t
+import math
+
+t.home()
+t.clear()
+t.pendown()
+t.color("red")
+
+for x in range(0,361,10): 
+    y = math.sin(3.14*x/180)*200
+    t.goto(x,y)
+
+t.penup()
+t.home()
+t.pendown()
+
+t.color("blue")
+for x in range(0,361,10):
+    y = math.cos(3.14*x/180)*200
+    t.goto(x,y)
+
+#----------------------------------------------------------------------------------------
+Điều khiển con rùa vẽ trục đồ thị x,y
+
+import turtle as t
+
+#t.home()
+#t.clear()
+t.color("black")
+
+t.penup()
+t.goto(-50,0)
+t.pendown()
+t.goto(400,0)
+
+t.penup()
+t.goto(0,250)
+t.pendown()
+t.goto(0,-250)
+
+
+#----------------------------------------------------------------------------------------
+Vẽ đồ thị hình sin,cos,tan
+
+#p.199.7 : 싸인함수,코싸인함수 그려보기
+
+import turtle as t
+import math
+
+t.home()
+t.clear()
+t.pendown()
+t.color("red")
+
+for x in range(0,361,10): 
+    y = math.sin(3.14*x/180)*200
+    t.goto(x,y)
+
+t.penup()
+t.home()
+t.pendown()
+
+t.color("blue")
+for x in range(0,361,10):
+    y = math.cos(3.14*x/180)*200
+    t.goto(x,y)
+
+#탄젠트함수 추가 -50 ~ 50    
+t.penup()
+t.home()
+#t.pendown()
+
+t.color("green")
+for x in range(-50,51,10):
+    y = math.tan(3.14*x/180)*200
+    t.goto(x,y)
+    if x == -50 : t.pendown()
+
+
+#================================================
+Chương trình tính diện tích hình tròn với bán kính = 100 ( ở trên sẽ gọi tên hàm và viết công thức để tính.Sau đó ở dưới sẽ code như bthg)
+
+
+
+def get_area(r): 
+    area = 3.14 * r**2
+    return area
+#------------------------------------------------------------------------------------
+
+radius = 100 
+a = get_area(radius)
+print(a)
+
+#================================================
+Tính diện tích của hình tròn với bán kính tự nhập vào 3 lần
+
+#원의 넓이
+def get_area(r): 
+    area = 3.14 * r**2
+    return area
+#------------------------------------------------------------------------------------
+
+for i in range(3): 
+    radius = float(input("반지름 >> "))
+    a = get_area(radius)
+    print(a)
+
+
+#================================================
+Thực hiện phép cộng 10 + 20 r in ra kết quả
+
+
+#ADD 함수 정의 
+
+def ADD(a,b):
+    c = a+ b 
+    return c
+#------------------------------------------------------------------------------------
+c = ADD(10,20)
+print(c)
+
+
+
+#================================================
+Thực hiện các phép tính cộng trừ nhân chia với số nguyên điền vào 
+
+
+#ADD 함수 정의 + SUB(),MULL(),DIV()
+
+def ADD(a,b):
+    c = a + b 
+    return c
+def SUB(a,b):
+    c = a - b 
+    return c
+def MUL(a,b):
+    c = a * b 
+    return c
+def DIV(a,b):
+    c = a / b 
+    return c
+#------------------------------------------------------------------------------------
+a = int(input("a >> "))
+b = int(input("b >> "))
+
+print(ADD(a,b))
+print(SUB(a,b))
+print(MUL(a,b))
+print(DIV(a,b))
+
+
+
+#================================================
+nhập 3 bán kính → tính diện tích → lưu vào list → tìm diện tích lớn nhất
+
+
+#원의 넓이
+def get_area(r): 
+    area = 3.14 * r**2
+    return area
+#------------------------------------------------------------------------------------
+AREA = []
+for i in range(3): 
+    radius = float(input("반지름 >> "))
+    a = get_area(radius)
+    print(a)
+    AREA.append(a)
+
+print("넓이가 가장 큰 원의 넓이는 %lf이다."% max(AREA))    
+
+
+
+#================================================
+Mua 2 cái pizza và phải điền tên + bán kính sau đó sẽ so sánh xem bán kính nào lớn hơn thì in ra
+
+
+#Q1 : 피자를 두판 주문 -> 피자 종류,반지름 각각 입력 -> 불고기피자 치즈피자보다 1.5배  더 크다 
+
+def get_area(r): 
+    area = 3.14 * r**2
+    return area
+#-----------------------------------------------------------------------------------
+p1 = input("피자 종류 >> ")
+r1 = int(input("반지름 >> "))
+print(p1,"의 크기는",area1,"\n")
+
+p2 = input("피자 종류 >> ")
+r2 = int(input("반지름 >> "))
+print(p2,"의 크기는",area1,"\n")
+
+area1 = get_area(r1)
+area2 = get_area(r2)
+
+if area1 > area2 * 1.5 : 
+    print(p1,p2,"보다 1.5배 더 큰다.")
+elif area1 < area2 * 1.5: 
+    print(p2,p1,"보다 1.5배 더 큰다.")
+
+
+
+#================================================
+Điền 3 số nguyên ngẫu nhiên và đi tìm max, min
+
+
+#Q2 : 세 정수 입력받아서 MAX(),MIN()을 구해서 출력하자
+# 단, 함수 MAX(),MIN(),만들 붑시다.
+
+def MAX(a,b,c):
+    return max(a,b,c)
+def MIN(a,b,c): 
+    return min(a,b,c)
+#----------------------------------------------------------------------------------
+
+a = int(input("정수 입력 >> "))
+b = int(input("정수 입력 >> "))
+c = int(input("정수 입력 >> "))
+
+print("MAX = ",MAX(a,b,c))
+print("MIN = ",MIN(a,b,c))
+
+
+
+
+#================================================
+
+
+
+
+
+#================================================
+ 
+

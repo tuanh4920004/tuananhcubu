@@ -1,0 +1,162 @@
+2546056.15
+
+*  *args : Nhận bao nhiêu đối số cũng được.Python sẽ tự gom các giá trị đó thành tuple.
+
+*     | Thành phần      | Ý nghĩa               |
+| --------------- | --------------------- |
+| `*args`         | Nhận nhiều đối số     |
+| `args`          | Tuple chứa các đối số |
+| `for i in args` | Duyệt từng giá trị    |
+| `a += i`        | Cộng dồn              |
+| `return a`      | Trả tổng              |
+
+
+
+#===============================================
+là một hàm Python có tham số mặc định (default parameter).
+
+
+def greet(name = "민수",msg = "별일없죠?"): 
+    return "안녕" + name + ', ' + msg
+    
+
+#--------------------------------------------------------------------------------
+print(greet())
+
+#================================================
+Cho phép hàm nhận linh hoạt nhiều giá trị khác nhau mà không cần biết trước số lượng.
+
+def varfunc(* args) : 
+    print(args)
+
+def Sum(* args) : 
+    a = 0
+    for i in args : 
+        a += i
+    return a
+#-------------------------------------------------------
+print("하나의 값으로 호출")
+varfunc(10)
+
+print("여러 개의 값으로 호출")
+varfunc(10,20,30)
+
+print(Sum(10,20,30))
+
+
+
+#===============================================
+* Hàm Sum sẽ có tác dụng tự viết hàm cộng các số bằng vòng lặp 
+
+* return sum(*s) : có nhiệm vụ lấy các phần tử bên trong ra riêng lẻ 
+
+def varfunc(* args) : 
+    print(args)
+
+def Sum(* args) : 
+    a = 0
+    for i in args : a += i
+    return a
+
+
+def SUM(* args) :
+    s = (args)
+    return sum(*s)
+#-------------------------------------------------------
+print("하나의 값으로 호출")
+varfunc(10)
+
+print("여러 개의 값으로 호출")
+varfunc(10,20,30)
+print(Sum(10,20,30))
+
+AA = [x for x in range(1,11)]
+print(SUM(AA))
+
+
+
+#================================================
+## Chương trình tính lương tuần
+
+* Tạo hàm tên: `weekPay(rate, hour)`
+* Điều kiện: nếu làm quá 30 giờ thì trả lương với mức 1.5 lần tiền công theo giờ.
+* Sử dụng keyword argument và default value, đặt mặc định:
+
+  * lương giờ = 1
+  * thời gian làm = 1 giờ
+* Nhập:
+
+  * lương theo giờ
+  * thời gian làm việc
+* Xuất:
+
+  > “Số tiền được trả là xxxxx won.”
+
+
+def weekPay(rate = 10320,hour = 1) :
+    if hour >= 30 : r = 1.5
+    return (rate * hour)
+
+#------------------------------------------------------------------------
+rate = int(input("시급 >> "))
+hour = int(input("근무 시간 >> "))
+print("주급은 %0f원입니다."%weekPay(rate,hour))
+
+
+rate = int(input("시급 >> "))
+hour = int(input("근무 시간 >> "))
+print("주급은 %0f원입니다."%weekPay(rate,hour))
+
+
+
+#===============================================
+Nhập tên tuổi và in ra dòng giới thiệu
+
+def get_intro(a,b): 
+    a = input("이름 입력 >> ")
+    b = int(input("나이 입력 >> "))
+    return "이름은 " + a +"이고 " + "나이는" + str(b) + " 살입니다"
+
+print(get_intro(0,0))
+
+
+#===============================================
+ Tạo các hàm công thức toán học cơ bản sau đó nhập số nguyên 
+
+* Sẽ tạo ra  lựa chọn để nhập xem muốn dùng phép toán nào 
+Sau đó nhập số và máy sẽ tự tính ra kết quả dựa vào phép toán đã chọn cũng như số đã nhập vào
+
+
+def ADD(a,b) : return a + b
+def SUB(a,b) : return a - b
+def MUL(a,b) : return a * b
+def DIV(a,b) : return a / b
+def get_input() : 
+    a = int(input("1 >> "))
+    b = int(input("2 >> "))
+    return a,b 
+#-------------------------------------------------------------------------------
+
+mn = int(input("선택) 1 :더하기 - 2 : 빼기 - 3 : 곱하기 - 4 : 나누기 >> "))
+a,b = get_input()
+
+if   mn == 1 : c = ADD(a,b); op = "+"  
+elif mn == 2 : c = SUB(a,b); op = "-"
+elif mn == 3 : c = MUL(a,b); op = "*"
+elif mn == 4 : c = DIV(a,b); op = "/"
+print("{} {} {} = {}".format(a,op,b,c))
+
+
+
+
+
+#===============================================
+
+
+
+
+
+
+
+
+#=============================================

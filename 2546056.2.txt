@@ -1,0 +1,72 @@
+2546056.2
+#-------------------------------------------------------------------------------------------
+làm phép toán gán kết hợp đầu tiên in ra giá trị ban đầu của x và y sau đó tính toán theo phép toán và in ra giá trị tương ứng
+
+x = 10 
+y = 20 
+
+print("x={}, y={}".format(x,y)); x+=y  
+print("x={}, y={}".format(x,y)); x-=y
+print("x={}, y={}".format(x,y)); x*=y
+print("x={}, y={}".format(x,y)); x//=y    
+print("x={}, y={}".format(x,y)); x/=y     
+print("x={}, y={}".format(x,y)); x%=y
+print("x={}, y={}".format(x,y)); x**=y
+print("x={}, y={}".format(x,y))
+
+
+#------------------------------------------------------------------------------------
+phép so sánh giữa x và y đã cho trc ( lưu ý "!="  là khác )
+
+x = 10 ; y = 20 ; z = 30 
+
+print("{} < {} -> {}".format(x,y,x<y))  
+print("{} <= {} -> {}".format(x,y,x<=y))
+print("{} > {} -> {}".format(x,y,x>y))
+print("{} >= {} -> {}".format(x,y,x>=y))  
+print("{} == {} -> {}".format(x,y,x==y))     
+print("{} != {} -> {}".format(x,y,x!=y))
+
+#-----------------------------------------------------------------------------------
+ban đầu phải dổi 10 và 20 sang nhị phân :
+10 = 1010
+20 = 10100  
+sau đó :))))
+
+
+
+
+x = 10 ; y = 20
+
+print("{} & {} -> {}".format(x,y,x & y))
+print("{} | {} -> {}".format(x,y,x | y))
+print("{} ^ {} -> {}".format(x,y,x ^ y))
+
+#------------------------------------------------------------------------------------
+
+
+x = 10 ; y = 20
+
+print("{} >> {} -> {}".format(x,2,x >> 2))
+print("{} << {} -> {}".format(x,2,x << 2))
+
+#--------------------------------------------------------------------------------------
+nhập năm sinh và tính tuổi 
+nếu >=20 thì là ng trưởng thành 
+        < 20 là trẻ vị thành niên
+
+year = int(input("출생년도 >> "))
+age = 2026 - year + 1
+
+if (age>=20) : print("당신은",age,"성인입니다")
+else         : print("당신은",age,"미성년자입니다")
+
+#----------------------------------------------------------------------------------------
+nhập giá trị của x và thêm điều kiện : 
+nếu x>=0 thì x = x
+        x < 0 thì x = -x
+
+
+x = int(input("값 >> "))
+if (x>=0) : print("x = ",x)
+else      : print("x = ",-x)

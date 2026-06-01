@@ -1,0 +1,99 @@
+2546056.12
+
+*Nếu khi random là số thì lệnh " r.randint " ---- còn nếu là chữ thì dùng " r.choice "  
+
+
+#---------------------------------------------------------------------------------------
+
+n = int(input(" >> "))
+for i in range(n) : 
+    for j in range(i + 1) :
+        print(j + 1, end = "")
+    print()
+#---------------------------------------------------------------------------------------
+viết code in ra bảng cửa chương 2  (  {:2} : Là thên khoảng cách với dấu = ) 
+
+for i in range(1,10) : 
+    print("{} x {} = {:2}".format(2,i,2 * i))
+
+#---------------------------------------------------------------------------------------
+Bảng cửu chương từ 2 đến 10 
+
+for j in range(2,10) : 
+    for i in range(1,10) : 
+        print("{} x {} = {:2}".format(j,i,j * i))
+    print()
+#---------------------------------------------------------------------------------------
+Bản đầy đủ hơn.Có thêm mục lục của từng bảng tương ứng
+
+for j in range(2,10) : 
+    print("< {}단 >".format(j))
+    for i in range(1,10) : 
+        print("{} x {} = {:2}".format(j,i,j * i))
+    print()
+#---------------------------------------------------------------------------------------
+Dùng để tạo mọi tổ hợp có thể giữa 2 nhóm dữ liệu
+
+import random as r
+
+adj = ["small","medium","large"]
+nouns = ["apple","banana","grape"]
+
+for x in adj : 
+    for y in nouns:
+        print(x, " = ",y)
+
+
+for x in adj : 
+    print(x," = ",r.choice(nouns))
+
+#---------------------------------------------------------------------------------------
+Random từng ng từng thời điểm
+
+
+import random as r
+
+persons = ["Kim","Park","Lee","Choi"]
+restaurants = ["Korea","America","French","Chinese"]
+loc = ["서울","대전","대구","부산","제주도"]
+
+for x in persons : 
+    print(x,"에게는",r.choice(loc),"의",r.choice(restaurants),"식당을 추천해줄께")
+
+
+#---------------------------------------------------------------------------------------
+
+sum = 0 
+
+for i in range(1,101) : 
+    sum += 1.0 / i 
+
+print("sum = ",sum)
+#---------------------------------------------------------------------------------------
+Thực hiện phép cộng phân số từ 1/1 đến 1/100
+
+
+sum = 0 
+
+for i in range(1,101) : 
+    if i % 2 == 0 :
+        sum -= 1.0 / i
+    else : sum += 1.0 / i
+
+print("sum = ",sum)
+
+
+#--------------------------------------------------------------------------------------
+
+
+a = 0 
+b = 1 
+
+n = int(input(" >> "))
+for i in range(n - 1 ) :
+    if i == 0 : print(a,b,end = " ")
+    else : 
+        c = a + b 
+        print(c,  end = " ")
+        a = b 
+        b = c

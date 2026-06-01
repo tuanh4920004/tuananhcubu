@@ -1,0 +1,117 @@
+2546056.4
+
+eval() : 문자열을 연산의 결과 반환 : nhập dữ liệu phép toán vào là sẽ tự động tính luôn
+VD : 10+5 -> in ra luôn = 15
+
+
+
+
+
+#-----------------------------------------------------------------------------------
+
+code quy đổi giá trị
+
+a = float(input("면적(제곱미터) : "))
+b = float(input("1평의 기줌 : "))
+c = a/3.3
+print("{}제곱미터는 {:.3f}평이다.".format(a,c))
+
+
+
+#------------------------------------------------------------------------------------
+
+
+a = eval(input("면적(제곱미터) : "))
+b = eval(input("1평의 기줌 : "))
+c = a/3.3
+print("{}제곱미터는 {:.3f}평이다.".format(a,c))
+
+#------------------------------------------------------------------------------------
+
+ban đầu nhập giá trị của sản phẩm sau đó tạo biến tiền w = 0 (w là tổng số tiền bạn nhập ;; ban đầu cho = 0 ) sau đó nhập số tờ 1000w,500w và 100w sau đó in ra số tiền đã nhập và giá của sản phẩm ban đầu 
+
+price = int(input("상품 가격 : "))
+print("=======입력금액=======")
+w = 0
+w1000 = int(input("1000원 지폐개수 : ")) ; w+=(w1000*1000)
+w500 = int(input("500원 지폐개수 : "))   ; w+=(w500*500)
+w100 = int(input("100원 지폐개수 : "))   ; w+=(w100*100)
+print("===================")
+print("현재 입력된 금액:{}/ 상품가격:{}".format(w,price))
+
+#------------------------------------------------------------------------------------
+
+ban đầu nhập giá trị của sản phẩm sau đó tạo biến tiền w = 0 (w là tổng số tiền bạn nhập ;; ban đầu cho = 0 ) sau đó nhập số tờ 1000w,500w và 100w sau đó in ra số tiền đã nhập và giá của sản phẩm ban đầu.thêm nữa có phần c = là tính tiền thừa sau khi đã mua sản phẩm
+
+" print("500원 = {}".format(c//500))
+print("100원 = {}".format(c//100))
+print(" 50원 = {}".format(c//50))
+print("  1원 = {}".format(c//1))  "
+
+phần này là tính giá của sản phẩm theo từng mệnh giá
+
+
+price = int(input("상품 가격 : "))
+print("=======입력금액=======")
+w = 0
+w1000 = int(input("1000원 지폐개수 : ")) ; w+=(w1000*1000)
+w500 = int(input("500원 지폐개수 : "))   ; w+=(w500*500)
+w100 = int(input("100원 지폐개수 : "))   ; w+=(w100*100)
+print("===================")
+c = w-price
+print("현재 입력된 금액:{}/ 상품가격:{}".format(w,c))
+
+print("500원 = {}".format(c//500))
+print("100원 = {}".format(c//100))
+print(" 50원 = {}".format(c//50))
+print("  1원 = {}".format(c//1))
+
+
+#----------------------------------------------------------------------------------
+
+ban đầu nhập giá trị của sản phẩm sau đó tạo biến tiền w = 0 (w là tổng số tiền bạn nhập ;; ban đầu cho = 0 ) sau đó nhập số tờ 1000w,500w và 100w sau đó in ra số tiền đã nhập và giá của sản phẩm ban đầu 
+
+w là ban đầu là = 0 vì chưa nhập số tiền vào nhưng sau đó nhập số tờ tiền các mệnh giá vào thì tính tổng lại
+
+sau đó chia phần tiền thừa thành các loại mệnh giá khác nhau phần c %= là lấy phần dư 
+
+sau đó in ra số lượng các mệnh giá tiền của số tiền thừa ở trên 
+
+price = int(input("상품 가격 : "))
+print("=======입력금액=======")
+w = 0
+w1000 = int(input("1000원 지폐개수 : ")) ; w+=(w1000*1000)
+w500 = int(input("500원 지폐개수 : "))   ; w+=(w500*500)
+w100 = int(input("100원 지폐개수 : "))   ; w+=(w100*100)
+print("===================")
+c = w-price
+print("현재 입력된 금액:{}/ 상품가격:{}".format(w,c))
+
+print("500원 = {}".format(c//500))  ; c %= 500
+print("100원 = {}".format(c//100))  ; c %= 100 
+print(" 50원 = {}".format(c//50))   ; c %= 50
+print("  1원 = {}".format(c//1))
+
+
+#------------------------------------------------------------------------------------
+
+nhập các thành phần và in ra kết quả hoàn chỉnh 
+
+a = input("드라이브 이름 : ")
+b = input("디럭토리 이름 : ")
+c = input("파일 이름 : ") 
+d = input("확장자 : ")
+f = a+":"+b+c+"."+d
+print("완전한 이름은 : {}".format(f))
+
+
+#---------------------------------------------------------------------------------------
+
+nhập số và in ra số với dấu phây phân cách hàng nghìn
+
+a = int(input("숫자를 입력하시오 : "))
+print("{:,}".format(a))
+
+#_----------------------------------------------------------------------------------
+
+

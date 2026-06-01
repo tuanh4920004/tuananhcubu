@@ -1,0 +1,117 @@
+2546056.10
+
+비트이동연산자 << or >> 이용해서 2의 거듭제곱 수를 10개 출력하기 : 
+
+Sử dụng toán tử dịch bit << hoặc >> để in ra 10 số lũy thừa của 2 
+ * 1 << i = 2 mũ i
+
+* 짝수 : số chẵn 
+  홀수 : số lẻ 
+
+* 랜덤를 입력받아서 2, 8 , 10 , 16  진수로 출력하기  :  Nhận một số ngẫu nhiên (random) rồi in ra dưới dạng hệ cơ số 2, 8, 10, 16 
+-- ( 2, 8, 10, 16 진수 → hệ nhị phân, bát phân, thập phân, thập lục phân)
+
+* 정수 3개 입력받아서 3자리 수를 출력해보자  : Nhập vào 3 số nguyên rồi in ra một số có 3 chữ số
+
+
+* str() : dùng để chuyển dữ liệu thành chuỗi ( string)
+
+  VD : dab = eval(str(a) + str(b) + str(c)) : in ra sẽ thành abc
+
+#---------------------------------------------------------------------------------------
+Cho chạy từ 1 đến 10 và tính tổng s = tổng bình phương của các số từ 1 đến 10
+
+
+s = 0 
+for i in range(1,11,1):
+    s += (i**2)
+
+print("sum = ",s)
+
+
+#-----------------------------------------------------------------------------------------
+Tính tổng từ 1 đế 10  ( lưu ý phải có if else thì mới ko bị thừa dấu " + " ở cuối )
+
+s = 0 
+for i in range(1,11,1):
+    s += (i)
+    if i == 10 : print(i,end = " ")
+    else :  print(i, end = " + ")
+    
+print(" = ",s)
+
+
+#----------------------------------------------------------------------------------------
+Tính lũy thừa của 10 ( Lưu ý phải ghi s  bắt đầu = 1 để kết quả ko = 0 vì
+
+s = 1
+for i in range(1,11,1):
+    s *= (i)
+    if i == 10 : print(i,end = " ")
+    else : print(i,end = " * ")
+print(" = ",s)
+
+
+#-------------------------------------------------------------------------------------
+Tính lũy thừa của 1 số bât kì ( Lưu ý dòng print t3 phải để a ở ngoài dấu " " thì mới tính đc )
+
+s = 1
+a = int(input("정수 입력 >> "))
+print(a,"! = ", end = " ")
+for i in range(1,a + 1 ,1):
+    s *= (i)
+    if i == 10 : print(i,end = " ")
+    else : print(i,end = " * ")
+print(" = ",s)
+
+
+#----------------------------------------------------------------------------------------
+Sử dụng toán tử dịch bit để in ra 10 số lũy thừa của 2
+
+for i in range (1,11,1): 
+    print(1 << i ,end = " ")
+
+#---------------------------------------------------------------------------------------
+Sử dụng toán tử dịch bit để in ra 10 số lũy thừa của 2
+
+
+for i in range (0,11): 
+    print("2 << ",i," = ",2 << i)
+
+
+#---------------------------------------------------------------------------------------
+nhập 3 số và in ra 1 số có 3 chữ số ( Lưu ý có "  str()  " đã giải thích ở trên )
+
+a,b,c = eval(input("3 정수 입력 >> "))
+dab = eval(str(a) + str(b) + str(c))
+print("만들어진 3자리 정수는 {}이다.".format(dab))
+
+#----------------------------------------------------------------------------------------
+Nhập giờ và phút xem là buổi chiều hay buổi sáng 
+
+*  if b == 60 :    : nếu phút = 60 thì chuyển thành 0 và + thêm 1 giờ 
+    a += 1 
+    b = 0
+
+
+
+a = int(input("시를 입력 >>"))
+b = int(input("분을 입력 >>"))
+
+if b == 60 : 
+    a += 1 
+    b = 0
+     
+if a > 12 : print("{} : {} 은 오후입니다".format(a,b))
+else : print("{} : {} 은 오전입니다".format(a,b))
+
+
+#--------------------------------------------------------------------------------------
+nhập số và tính theo công thức pythago và in ra 5 lần 
+
+
+for i in range(5) : 
+    a = float(input("밑변 입력 >> "))
+    b = float(input("높이 입력 >> "))
+    c = (a * a + b * b) ** 0.5
+    print("빗변 = ",c)

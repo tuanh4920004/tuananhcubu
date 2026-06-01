@@ -1,0 +1,83 @@
+2546056.1
+
+con rùa di chuyển thành 3 hình tròn 
+
+import turtle
+t = turtle.Turtle()
+t.shape("turtle")
+
+radius = 100
+t.circle(radius) # 반지름이 100인 원이 그려 진다.
+t.fd(30)
+t.circle(radius) # 반지름이 100인 원이 그려 진다.
+t.fd(30)
+t.circle(radius) # 반지름이 100인 원이 그려 진다.
+turtle.mainloop()
+turtle.bye()
+
+#--------------------------------------------------------------------
+nhập giá trị và quy đổi 
+
+ftemp = int(input("ftemp >> "))
+
+ctemp = (ftemp-32.0)*5.0/9.0
+print("섭씨오도 : ",ctemp)
+
+#-------------------------------------------------------------------
+nhập bán kính và chiều cao và cho công thức 
+tính 원의 넓이 ( diện tích hình tròn ) và 원기둥의 부피 ( thể tích hình trụ )
+
+PI = 3.141592
+
+#원의 반지름 
+r = float(input("반지름 : "))
+area = PI * r * r 
+h = float(input(" 높이 : "))
+vol = area * h 
+
+print("반지름 : {}, 높이 : {} 일때, \n".format(r,h))
+print("원의 넓이 : {}, 원기둥의 부피 : {}\n".format(area,vol))
+
+#--------------------------------------------------------------------
+viết chương trình tính toán các phép toán đơn giản
+
+a = float(input("a >> "))
+b = float(input("b >> "))
+
+print("{} +  {} = {}".format(a,b,a + b))
+print("{} -  {} = {}".format(a,b,a - b))
+print("{} *  {} = {}".format(a,b,a * b))
+print("{} // {} = {}".format(a,b,a //b))
+print("{} %  {} = {}".format(a,b,a % b))
+
+#----------------------------------------------------------------------
+tính chân gà chân lợn chân bò
+
+닭의수 = int(input(" 닭의 수 >> "))
+a = 닭의수 * 2
+돼지의수 = int(input(" 돼지의 수 >> "))
+b = 돼지의수 * 4
+소의수 = int(input(" 소의 수 >> "))
+c = 소의수 * 4 
+print("전체 다리의 수 : {}\n".format(a+b+c))
+
+#------------------------------------------------------------------------
+tính độ dài lớn nhất của cạnh còn lại trong tam giác 
+
+a = float(input("삼각형의 첫 번째 변의 길이 : "))
+b = float(input("삼각형의 두 번째 변의 길이 : "))
+sum = (a+b)-1
+print("삼각형의 나머지 번째 변의 최대 길이 = {}".format(sum))
+
+#---------------------------------------------------------
+tính thời gian quy đổi ra giây
+
+a = int(input("시간 입력 >> "))
+b = int(input("분 입력 >> "))
+sum  = a*60*60 + b*60 
+print("{}t시간 {}분은 {} 초임니다.".format(a,b,sum))
+
+
+
+
+

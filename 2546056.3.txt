@@ -1,0 +1,71 @@
+2546056.3
+
+round() : dùng để làm tròn số
+
+*  ví dụ print(round(a,4))
+nếu a = 4,12345 
+thì sẽ ra kết quả là
+4,1234
+
+[] : cắt chuỗi / string 
+
+print("="*30) : nhập 30 dấu = 
+
+%10 : lấy phần dư của số đã cho và tính
+
+#--------------------------------------------------------------------------------
+nhập nơi dữ liệu và in ra
+print("="*30) : nhập 30 dấu = 
+
+st = input("경기장은 어디입니까? ")
+win = input("이긴 팀은 어디?")
+lsr = input("진팀은 어디?")
+vip = input("우수선수는 누구?")
+scr = input("스코어는 몇대몇?")
+
+print("="*30)
+print("오늘 {}에서 야구 경기가 열렸습니다.".format(st))
+print("{}과 {}은 치열한 공방전을 펼쳤습니다.".format(win,lsr))
+print("{}이 맹활약을 하였습니다.".format(vip))
+print("결국 {}가 {}를 {}로 이겼습니다.".format(win,scr,lsr))
+print("="*30)
+
+#----------------------------------------------------------------------------------
+nhập số và tính các phép toán
+
+a = int(input("x : "))
+b = int(input("y : "))
+
+print("두수의 합: {}".format(a+b))
+print("두수의 차: {}".format(a-b))
+print("두수의 곱: {}".format(a*b))
+print("두수의 평균: {}".format((a+b)/2))
+print("큰수 : {}".format(max(a,b)))
+print("작은 수 : {}".format(min(a,b)))
+
+#-------------------------------------------------------------------------
+tính tiền chi tiêu
+
+a = int(input("음식 비용 : "))
+b = int(input("팁 비율 : "))
+sum = a + (b/100)*a
+print("총액: {} 달러".format(round(sum)))
+
+#----------------------------------------------------------------------------
+nhập tọa độ và tính theo pt cho sẵn r in ra kết quả
+
+a= int(input("x1 = "))
+b= int(input("y1 = "))
+c= int(input("x2 = "))
+d= int(input("y2 = "))
+sum = ((a-c)*(a-c) + (b-d)*(b-d))**0.5)
+print("두점 사이의 거리 = {}".format(sum))
+
+
+#---------------------------------------------------------------------------
+tính tổng của từng số trong 1 dãy số nhập vào
+
+a = int(input("정수 = "))
+sum = a//1000 + (a//100)%10+ (a//10)%10 + a%10
+print(sum)
+

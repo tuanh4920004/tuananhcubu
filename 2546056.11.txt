@@ -1,0 +1,243 @@
+2546056.11
+
+* while : dùng để lặp lại một đoạn code khi điều kiện còn đúng
+
+ Cú pháp : while điều_kiện:
+                     code
+
+Nghĩa là:
+
+Nếu điều kiện = True → tiếp tục chạy
+Nếu điều kiện = False → dừng
+
+* while True : Vòng lặp vô hạn nhập đến khi nào đúng thì dừng ( phải có break thì đúng mới dừng đc )
+
+
+*name = ["철수","영희","민수" ] : điền tên 
+ 
+#----------------------------------------------------------------------------------------
+Code này dùng để in ra một mẫu số tăng dần theo từng dòng (pattern).
+
+a = int(input("정수 입력 >> "))
+for i in range(1,a+1):
+    for j in range(1,i):
+        print(j,end =" ")
+    print(i)
+
+#----------------------------------------------------------------------------------------
+Tính số năm để từ số tiền đang có là 1000 lên 2000 với lãi suất 7% mỗi năm
+
+target = 2000
+money = 1000
+year = 0
+rate = 0.07 
+
+while money < target : 
+    money = money + money * rate 
+    year = year + 1
+print(year,"년")
+
+
+#--------------------------------------------------------------------------------------
+Giống như trên nhưng in ra tiền nhận đc của các năm
+
+target = 2000
+money = 1000
+year = 0
+rate = 0.07 
+
+while money < target : 
+    money = money + money * rate 
+    year = year + 1
+    print(year, "년 경과시)",money)
+print("최종",year,"년")
+
+
+#----------------------------------------------------------------------------------------
+Tính tổng từ 1 đến 10
+
+i = 1 
+sum = 0 
+
+while i <= 10 : 
+    sum = sum + i 
+    i = i + 1 
+print("합계는 ",sum)
+#----------------------------------------------------------------------------------------
+Tính tổng các số chẵn <= 10 ( while i <= 10 )
+
+i = 1 
+sum = 0 
+
+while i <= 10 :
+    
+    if i % 2 == 0 :
+        print(i,end = " ")
+        sum = sum + i
+    
+   
+    i += 1
+print("합계는 ",sum)
+
+#-------------------------------------------------------------------------------------
+In ra 10 cái Hello
+
+i = 1
+while i <= 10 : 
+    print("Hello!")
+    i += 1
+
+#--------------------------------------------------------------------------------------
+Nhập 10 số và tính tổng ( i+= 1 : Tăng biến đếm để tiếp tục lần nhập tiếp theo.)
+*Nhập đc 10 lần vì chừng nào i còn nhỏ hơn hoặc = 10 thì vòng lặp còn chạy ( Giới hạn là 10 lần )
+
+i = 1 
+s = 0
+while i <= 10 : 
+    a= int(input("정수 입력 >> "))
+    s += a
+    i += 1
+    
+print("합계는 ",s)
+
+#----------------------------------------------------------------------------------------
+Tạo ngẫu nhiên 10 số từ 1 đến 100, in các số lẻ và tính tổng các số lẻ đó.
+
+import random as r 
+i = 1 
+s = 0 
+
+while i <= 10 :
+    a = r.randint(1,100)
+    if a % 2 == 1 :
+        print(a,end = " ")
+        s += a
+    i += 1
+print("합계는 ",s)
+
+#--------------------------------------------------------------------------------------
+Tạo ngẫu nhiên 10 số từ -10 đến 10 , in ra các số < 0 và tính tổng các số đc in ra
+
+import random as r 
+i = 1 
+s = 0 
+
+while i <= 10 :
+    a = r.randint(-10,10)
+    if a < 0 :
+        print(a,end = " ")
+        s += a
+    i += 1
+print("합계는 ",s)
+
+
+#---------------------------------------------------------------------------------------
+Code dùng để đoán số dựa trên số mà máy random từ 1 đến 100.
+Vòng lặp tối đa là 20 lần nhập 
+Nếu nhập đúng với số  mà máy random thì kết thúc ( if a == user : break )
+
+## 랜덤수 1 ~ 100 `개 발생 -> 맞춰 ( ạo các số ngẫu nhiên từ 1 đến 100 → hãy đoán/chỉnh cho đúng)
+
+import random as r
+a = r.randint(1,100)
+
+i = 1
+while i <= 20 : 
+    user = int(input("su >> "))
+    print("랜덤수 - ",a,"user - ",user)
+    if a == user : break
+    i += 1
+
+#----------------------------------------------------------------------------------------
+Code dùng để đoán số dựa trên số mà máy random từ 1 đến 100.
+Vòng lặp tối đa là 20 lần nhập 
+Nếu nhập đúng với số  mà máy random thì kết thúc ( if a == user : break )
+
+*Code phía trên có in ra số mà máy random còn ở dưới sẽ ko in ra số random 
+Và sau khi nhập số nếu số random lớn hơn số nhập sẽ in ra "높게!!" 
+Nhỏ hơn sẽ in ra  "낮게!!"
+
+## 랜덤수 1 ~ 100 `개 발생 -> 맞춰 ( ạo các số ngẫu nhiên từ 1 đến 100 → hãy đoán/chỉnh cho đúng)
+
+import random as r
+a = r.randint(1,100)
+
+i = 1
+while i <= 20 : 
+    user = int(input("su >> "))
+    if a == user : print("정답!!"); break
+    elif a > user : print("높게!!")
+    else : print("낮게!!")
+    i += 1
+
+#----------------------------------------------------------------------------------------
+nhập mật khẩu cho đến khi đúng thì đăng nhập thành công
+
+
+pw = "pythonisfun"
+
+while True : 
+    userPW = input("암호를 입력 >> ")
+    
+    if pw == userPW : 
+        print("로그인 성공")
+        break
+      
+#---------------------------------------------------------------------------------------
+nhập tài khoản và mật khẩu cho đến khi đúng thì đăng nhập thành công
+
+id = "puthon@y"
+pw = "pythonisfun"
+
+while True : 
+    userPW = input("암호를 입력 >> ")
+    userID = input("ID를 입력 >> ")
+    if pw == userPW and id == userID : 
+        print("로그인 성공")
+        break
+
+#---------------------------------------------------------------------------------------
+3 nguời tung xúc xắc và tìm ra ng tung ra số lớn nhất
+
+* max = 0 : Lưu số lớn nhất hiện tại ( Ban đầu = 0 vì xũ xắc luôn lớn hơn 0 )
+
+
+#"철수","영희","민수" 3명이 주사위를 던져서 가장 큰 수가 나온 사람은? 
+import random as r 
+
+name = ["철수","영희","민수" ]
+i = 0 
+max = 0 
+n = " "
+while i < 3: 
+    a = r.randint(1,6)
+    print(name[i],"/",a)
+    if max < a : 
+        max = a 
+        n = name[i]
+    i += 1
+print("\n 가장 큰 수 ",max,"가 나온 사람 : ",n)
+
+#---------------------------------------------------------------------------------------
+phát cho 4 người các lá bài ngẫu nhiên có số từ 1 đến 10 và in ra tên : số random tương ứng của từng ng
+
+import random as r 
+
+name = ["KIm","Park","Lee","Choi"]
+i = 0 
+n = " "
+while i < 4 : 
+    a = r.randint(1,10)
+    print(name[i],":",a)
+    i += 1
+
+#--------------------------------------------------------------------------------------
+Rút 10 lá ngẫu nhiên trong khoảng từ 1 đến 100 và in ra
+
+import random as r
+print("철수 : ",end = "  ")
+i =  0
+while i < 10 : 
+    a = r.randint(1,100)
+    print(a,end = " ")
+    i += 1
