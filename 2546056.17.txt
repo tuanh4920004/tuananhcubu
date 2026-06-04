@@ -1,0 +1,209 @@
+2546056.17
+
+
+
+
+
+
+#================================================
+
+#1 : 
+def get_peri(radius = 5.0) :
+    return 2 * 3.14 * radius
+#-----------------------------------------------------------------------------
+a = float(input("radius = "))
+print("get_peri = {}".format(get_peri()))
+print("get_peri({}) = {}".format(a,get_peri(a)))
+    
+
+
+
+#================================================
+
+#2 : 
+def ADD(a,b) : return a + b
+def SUB(a,b) : return a - b
+def MUL(a,b) : return a * b
+def DIV(a,b) : return a / b
+#-----------------------------------------------------------------------------
+
+c = int(input("첫 번째 정수를 입력 >> "))
+d = int(input("두 번째 정수를 입력 >> "))
+
+print("{} + {} = {}".format(c,d,ADD(a,b)))
+print("{} - {} = {}".format(c,d,SUB(a,b)))
+print("{} * {} = {}".format(c,d,MUL(a,b)))
+print("{} / {} = {}".format(c,d,DIV(a,b)))
+
+
+#================================================
+
+#3 : 
+def calc(a,b,op) : 
+    if op == "+" : 
+        return a + b
+    elif op == "-" : 
+        return a - b
+    elif op == "*" : 
+        return a * b
+    elif op == "/" : 
+        return a / b
+    
+#--------------------------------------------------------------------------------
+
+c = int(input("첫 번째 정수를 입력 >> "))
+d = int(input("두 번째 정수를 입력 >> "))
+
+print("{},{},{},{}이반환되었습니다.".format(calc(c,d,"+"),calc(c,d,"-"),calc(c,d,"*"),calc(c,d,"/")))
+
+
+#================================================
+
+#4 : 
+def getGrade(score) : 
+    if score >= 90 : 
+        return 'A'
+    elif score >= 80 : 
+        return 'B'
+    elif score >= 70 : 
+        return 'C'
+    elif score >= 60 : 
+        return 'D'
+    else : 
+        return 'F'
+    
+#-------------------------------------------------------------------------------
+
+score = int(input("정수 입력 >> "))
+a = getGrade(score)
+
+print("성적은 {}입니다.".format(a))
+
+
+
+#================================================
+
+#5 : 
+def checkPass(p) :
+    PASS = 0
+    d = l = u = 0
+    
+    if len(p) >= 8 : PASS += 1
+        
+    for i in p:
+        if i.isupper() : u += 1
+        if i.islower() : l += 1
+        if i.isdigit() : d += 1
+            
+    if PASS > 0 and u > 0 and l > 0 and d > 0 : print("사용할 수 있습니다")
+    else         : print("사용할 수 없습니다")
+
+#---------------------------------------------------------------------------------
+checkPass("A1316885416")
+
+
+#================================================
+
+#6 : 
+def get_math() : 
+    a = int(input("첫 번째 정수를 입력 >> "))
+    b = int(input("두 번째 정수를 입력 >> "))
+    print("정수 {} + {}의 합은? {}".format(a,b,ADD(a,b)))
+get_math()
+
+
+
+#================================================
+
+#7 :
+def getlntRange(a,b,msg) : 
+    while True : 
+        c = int(input(msg))
+        if a <= c <= b : 
+            return c
+
+print("날짜를 입력하시오(월과 일)")
+month = getlntRange(1,12,"월을 입력하시오(1부터 12사이의 값): ")
+
+if month == 2 :
+    day = getlntRange(1,28,"일을 입력하시오(1부터 28사이의 값):")
+elif month == {4,6,9,11} : 
+    day = getlntRange(1,30,"일을 입력하시오(1부터 30사이의 값): ")
+else : 
+    day = getlntRange(1,31,"일을 입력하시오(1부터 31사이의 값): ")
+
+print("입력된 날짜는 {}월 {}일입니다.".format(month,day))
+
+
+
+#===============================================
+
+#8 : 
+def getMoneyText(amount) : 
+    t = ["영","일","이","삼","사","오","육","칠","팔","구"]
+    
+    if amount // 100 > 0 : print(t[amount // 100],"백",end = "",sep = "")
+    if amount % 100 // 10 > 0 : print(t[amount % 100 // 10],"십",end = "",sep = "")
+    if amount % 10 > 0 : print(t[amount % 10],"원",sep = "")
+
+amount = int(input("1000 이하의 금액을 입력 >>  "))
+getMoneyText(amount)
+
+#================================================
+
+#9 : 
+
+a = int(input("첫 번째 정수를 입력 >> "))
+b = int(input("두 번째 정수를 입력 >> "))
+
+gcd = 1 
+
+for i in range(a,max(a,b) + 1) : 
+    if a % i == 0 and b % i == 0: 
+        gcd = i
+print(i)
+
+
+
+#================================================
+
+#10 : 
+def testPrime(n) : 
+    for i in range(2,n) : 
+        if n % i == 0 :
+            return 
+    print(n, end = " ")
+
+for i in range(2,101) : 
+    testPrime(i)
+
+
+
+#================================================
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+
+#===============================================
