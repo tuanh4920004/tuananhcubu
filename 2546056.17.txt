@@ -6,6 +6,7 @@
 
 
 #================================================
+Dùng để tính chu vi hình tròn sau khi đã nhập bán kính 
 
 #1 : 
 def get_peri(radius = 5.0) :
