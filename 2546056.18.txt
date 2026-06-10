@@ -1,0 +1,170 @@
+2546056.18
+
+
+
+
+
+
+#===============================================
+Tìm ước chung lớn nhất của 2 số nhập vào 
+
+#9 : 
+import math
+
+def 최대공약수(a,b) : 
+    return math.gcd(a,b)
+
+
+
+#---------------------------------------------------------------------------------
+a,b = eval(input("a,b >> "))
+print("최대공약수 -> ",최대공약수(a,b))
+
+
+
+
+
+#================================================
+
+#11 : deci2bin(n) 함수 생성
+
+def deci2bin(n) : 
+    print("{:b}".format(n))
+    
+    
+n = int(input("n >> "))
+deci2bin(n)
+
+
+
+#===============================================
+Sắp xếp 2 số nhập vào theo thứ tự tăng dần 
+
+def getSorted(x,y) : 
+    if x < y : return x,y
+    else     : return y,x
+    
+x,y = eval(input("x,y >> "))
+print("정렬 후 :",getSorted(x,y))
+
+
+
+#================================================
+Code tung xúc xắc giữa ng chơi và máy tính 
+
++ ng chơi sẽ nhập số mà mình muốn từ 1 đến 6 còn máy tính sẽ random từ 1 đến 6 
+ 
++ in ra kết quả của ng chơi và máy tính 
+
++ Sau đó cho điều kiên luôn đúng sẽ luôn in ra kết quả
+
+
+13 : 인간과 컴이 주사위 게임 
+
+import random as r
+
+def dice_game(): 
+    user = int(input("인간 : 주사위값 = "))
+    com  = r.randint(1,6)
+    print("컴퓨터 : 주사위값 = ",com)
+    
+    if user > com : print("인간승리")
+    elif user == com : print("인간 - 컴퓨터 비김")
+    else :  print("컴퓨터승리")
+#---------------------------------------------------------------------------        
+
+while True :
+    print("="*10,"dice_game() 호출","="*10)
+    dice_game()
+    print("="*10,"dice_game() 복귀","="*10)
+    
+    yn = input("중단할까요? Y/N  ")
+    
+    if yn == 'Y' or yn == 'y' : break
+
+
+
+
+#================================================
+
+def testPrime(n) : 
+    cnt = 0
+    
+    for i in range(1,33) : 
+        if n % i == 0 : cnt += 1 
+    
+    if cnt == 2 : print(n, end = " ")
+#--------------------------------------------------------------------------
+for n in range(2,101) : 
+    testPrime(n)
+
+#================================================
+
+import turtle as t 
+
+def draw_square(size,x = 30) : 
+    size = 10 
+
+    for n in range(1,x + 1) : 
+        t.fd(size + (n * 5))
+        t.left(90)
+        
+#-------------------------------------------------------------
+t.home()
+t.clear()
+size = int(input("size >> "))
+draw_square(size,50)
+
+
+
+#================================================
+
+import turtle as t
+def draw_line(s) : 
+    t.forward(s)
+    t.home()
+#-----------------------------------
+t.clear()
+for i in range(1,13) : 
+    t.setheading(i * 30)
+    draw_line(i * 30 )
+    
+
+
+
+#================================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#===============================================
+
+
+
+
+
+#================================================
+
+
+
+
+
+
+#===============================================
+
