@@ -25,6 +25,7 @@ print("최대공약수 -> ",최대공약수(a,b))
 
 
 #================================================
+Code dùng để đổi số thập phân(decimal) sang số nhị phân(binary)
 
 #11 : deci2bin(n) 함수 생성
 
@@ -86,6 +87,7 @@ while True :
 
 
 #================================================
+code dùng để in ra các số nguyên tố từ 2 đến 100 
 
 def testPrime(n) : 
     cnt = 0
@@ -99,6 +101,7 @@ for n in range(2,101) :
     testPrime(n)
 
 #================================================
+Đoạn code điều khiển con rùa vẽ hình xoắn ốc vuông 
 
 import turtle as t 
 
