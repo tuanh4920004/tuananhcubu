@@ -91,7 +91,14 @@ Code dùng để kiểm tra xem mật khẩu có đủ điều kiện sử dụn
 
 * Đầu tiên sẽ viết hàm checkPass : 
   cho tất cả các đơn vị ban đầu đều = 0 hết 
-* 
+* Sau đó sẽ ra điều kiện : nếu độ dài của PASS >= 8 thì PASS sẽ + thêm 1 
+
+* Vòng lặp for i in p : Dùng để duyệt từng kí tự trong mật khẩu đã nhập 
+
+* Tương tự như điều kiện của hàm trên, nếu ký tự nào viết hoa(isupper()) ,viết thường (islower()) và có ký tự số (isdigit()) thì tất cả đơn vị tương ứng sẽ + thêm 1 
+
+* Và điều kiện cuối cùng là mấu chốt : if PASS > 0 and u > 0 and l > 0 and d > 0
++ Điều kiện này bắt buộc mật khẩu nhập vào phải có độ dài kí tự >= 8,có chứ hoa, có chữ thường và có kí tự số thì mới có thể sử dụng đc 
 
 #5 : 
 def checkPass(p) :
@@ -113,7 +120,7 @@ checkPass("A1316885416")
 
 
 #================================================
-
+Code thự hiện luôn phép cộng mà ko cần phải in ra phép toám(tương tự với - * và /)
 #6 : 
 def get_math() : 
     a = int(input("첫 번째 정수를 입력 >> "))
@@ -124,6 +131,7 @@ get_math()
 
 
 #================================================
+Code này sẽ in ra ngày tháng hợp lệ
 
 #7 :
 def getlntRange(a,b,msg) : 
@@ -147,6 +155,7 @@ print("입력된 날짜는 {}월 {}일입니다.".format(month,day))
 
 
 #===============================================
+Code này sẽ in ra cách đọc của số dưới 1000
 
 #8 : 
 def getMoneyText(amount) : 
@@ -160,6 +169,7 @@ amount = int(input("1000 이하의 금액을 입력 >>  "))
 getMoneyText(amount)
 
 #================================================
+Code này sẽ in ra ước chung lớn nhất của 2 số nhập vào   
 
 #9 : 
 
@@ -168,7 +178,7 @@ b = int(input("두 번째 정수를 입력 >> "))
 
 gcd = 1 
 
-for i in range(a,max(a,b) + 1) : 
+for i in range(a,min(a,b) + 1) : 
     if a % i == 0 and b % i == 0: 
         gcd = i
 print(i)
@@ -176,6 +186,7 @@ print(i)
 
 
 #================================================
+Code sẽ in ra các số nguyên tố từ 2 đến 100 
 
 #10 : 
 def testPrime(n) : 
