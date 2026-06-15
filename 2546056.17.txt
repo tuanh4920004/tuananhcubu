@@ -20,6 +20,7 @@ print("get_peri({}) = {}".format(a,get_peri(a)))
 
 
 #================================================
+Code dùng để tính các phép tính + - * và / của 2 số nhập vào 
 
 #2 : 
 def ADD(a,b) : return a + b
@@ -38,6 +39,8 @@ print("{} / {} = {}".format(c,d,DIV(a,b)))
 
 
 #================================================
+nhập 2 số vào và in ra kết quả của các phép tính + - * / thành 1 dãy 
+Lệnh calc dùng để tính toán 
 
 #3 : 
 def calc(a,b,op) : 
@@ -59,6 +62,7 @@ print("{},{},{},{}이반환되었습니다.".format(calc(c,d,"+"),calc(c,d,"-"),
 
 
 #================================================
+Nhập điểm số đạt đc và viết các điều kiện để đạt loại nào 
 
 #4 : 
 def getGrade(score) : 
@@ -83,6 +87,11 @@ print("성적은 {}입니다.".format(a))
 
 
 #================================================
+Code dùng để kiểm tra xem mật khẩu có đủ điều kiện sử dụng ko 
+
+* Đầu tiên sẽ viết hàm checkPass : 
+  cho tất cả các đơn vị ban đầu đều = 0 hết 
+* 
 
 #5 : 
 def checkPass(p) :
