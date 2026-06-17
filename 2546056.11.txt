@@ -27,6 +27,13 @@ for i in range(1,a+1):
 #----------------------------------------------------------------------------------------
 Tính số năm để từ số tiền đang có là 1000 lên 2000 với lãi suất 7% mỗi năm
 
+* Ban đầu sẽ đặt ra số tiền gốc và tiền mục tiêu đạt đc 
+* Số năm ban đầu đc đặt = 0 và rate là lãi suất sẽ = 0,07 (7%/năm)
+
+* Điều kiện while money < target : Nếu như chưa đạt đc số tiền mục tiêu đề ra thì sẽ phải tiếp tục vòng lặp 
+* Công thức : money = money + money * rate : là công thức tính lãi suất kép.Nó = với money * (1 + rate)
+* year = year + 1 : Tăng thêm bộ đếm mỗi năm khi tính ra tiền sau khi đã nhận lãi hàng năm 
+
 target = 2000
 money = 1000
 year = 0
@@ -40,6 +47,15 @@ print(year,"년")
 
 #--------------------------------------------------------------------------------------
 Giống như trên nhưng in ra tiền nhận đc của các năm
+
+* Ban đầu sẽ đặt ra số tiền gốc và tiền mục tiêu đạt đc 
+* Số năm ban đầu đc đặt = 0 và rate là lãi suất sẽ = 0,07 (7%/năm)
+
+* Điều kiện while money < target : Nếu như chưa đạt đc số tiền mục tiêu đề ra thì sẽ phải tiếp tục vòng lặp 
+* Công thức : money = money + money * rate : là công thức tính lãi suất kép.Nó = với money * (1 + rate)
+* year = year + 1 : Tăng thêm bộ đếm mỗi năm khi tính ra tiền sau khi đã nhận lãi hàng năm 
+* print(year, "년 경과시)",money) : In ngay trong vòng lặp; In ra số tiền nhận đc từng năm  sau khi đã cộng thêm lãi suất 
+* print("최종",year,"년") : In sau vòng lặp;Chỉ in khi số tiền sau cùng đã đạt target 
 
 target = 2000
 money = 1000
