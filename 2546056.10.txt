@@ -18,6 +18,19 @@ Sử dụng toán tử dịch bit << hoặc >> để in ra 10 số lũy thừa c
 
   VD : dab = eval(str(a) + str(b) + str(c)) : in ra sẽ thành abc
 
+
+* Cách tính bit nhị phân : 
+
++) Láy số cần tính ra chia cho 2 
++) Sau đó lấy phần dư
++) Tiếp theo lấy thương hia tiếp cho 2 ( Lưu ý : Khi lấy thương chia cho 2 bắt buộc phải lấy phần nguyên )
++) Cứ thế lặp lại 3 phần trên đến cuối cùng 
++) Ở phần cuối cùng sẽ là 1 / 2 sẽ luôn luôn = 0 dư 1 
++) Lấy phần dư ở cuối là 1 
++) Sau đó sẽ đọc TỪ DƯỚI LÊN TRÊN ( lƯU Ý PHẢI ĐỌC TỪ DƯỚI LÊN TRÊN ) 
+
+
+
 #---------------------------------------------------------------------------------------
 Cho chạy từ 1 đến 10 và tính tổng s = tổng bình phương của các số từ 1 đến 10
 
