@@ -2,7 +2,7 @@
 
 * range() : dùng để tạo dãy số với cấu trúc là ( mở đầu , kết thúc , bước nhảy ) 
 
-* for : vòng lặp chạy qua tuwfng phần tử
+* for : vòng lặp chạy qua từng  phần tử
   for = “lặp theo danh sách có sẵn”
  VD : range(5) = tạo dãy 0;1;2;3;4;5
         for sẽ lấy từng phần tử : 
@@ -53,7 +53,7 @@ for i in range(1,y + 1) :
     if y % i == 0 : print(i,end = " ")
 
 #---------------------------------------------------------------------------------------
-nhập số đầu và cuối và số nào chia hết cho b thif in ra
+nhập số đầu và cuối và số nào chia hết cho b thì in ra
 
 s1 = int(input("시작 입력 >> "))
 s2 = int(input("끝 입력 >> "))
@@ -100,7 +100,7 @@ Nhập 2 số và tìm ước chung của chúng
 s1 = int(input("s1 입력 >> "))
 s2 = int(input("s2 입력 >> "))
 
-for i in range(1,max(s1,s2) + 1): 
+for i in range(1,min(s1,s2) + 1): 
     if s1 % i == 0 and  s2 % i == 0   : print(i,end = " ")
 
 
